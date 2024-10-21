@@ -125,6 +125,8 @@ body{
         border-radius: 999px;
         color: $White;
 
+        cursor: pointer;
+
         width: 160px;
 
         @include Text-preset-4-bold;
