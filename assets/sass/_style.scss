@@ -295,7 +295,7 @@ body{
         width: 18px;
 
         &::after{
-            content: url('/assets/images/icon-remove-item.svg');
+            content: url('./assets/images/icon-remove-item.svg');
         }
 
         &:hover{
