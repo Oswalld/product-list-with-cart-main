@@ -127,7 +127,7 @@ function createFoodCard(item) {
         <img class="food-card-img-img" src="${item.image.desktop}" alt="${item.name}">
       </picture>
       <button class="food-card-button">
-        <img src="/assets/images/icon-add-to-cart.svg" alt="">
+        <img src="./assets/images/icon-add-to-cart.svg" alt="">
         <div>Add to cart</div>
       </button>
       <button class="food-card-button-added" style="display: none;">
