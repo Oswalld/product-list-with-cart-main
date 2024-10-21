@@ -1,0 +1,80 @@
+// Mixins
+@mixin button-base {
+  border: none;
+  border-radius: 555px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+@mixin icon-button($size) {
+  width: $size;
+  height: $size;
+  border-radius: 555px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+// Styles
+.component {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.plus-minus-button,
+.add-to-cart-button,
+.placeholder-button,
+.close-button {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  &.minus, &.plus {
+    @include icon-button(50px);
+    background-color: $Red;
+    color: $White;
+  }
+
+  &.cart {
+    @include button-base;
+    background-color: $White;
+    color: $Red;
+    border: 2px solid $Red;
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  &.placeholder {
+    @include button-base;
+    background-color: $Red;
+    color: $White;
+  }
+
+  &.close {
+    @include icon-button(40px);
+    background-color: $Red;
+    color: $White;
+    font-size: 18px;
+  }
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+  .number {
+    font-size: 18px;
+  }
+}

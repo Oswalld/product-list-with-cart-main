@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="/assets//sass/main.css">
+  
+  <title>Frontend Mentor | Product list with cart</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="global-container">
+    <div class="container">
+      <h1 class="Text-preset-1">Desserts</h1>
+      <div class="food-card-container">
+        <!-- <div class="food-card">
+      
+          <div class="food-card-block-img">
+      
+            <picture class="food-card-img">
+              
+              <source media="(min-width: 1024px)" srcset="/assets/images/image-waffle-desktop.jpg">
+          
+              
+              <source media="(min-width: 768px)" srcset="/assets/images/image-waffle-tablet.jpg">
+          
+              
+              <source media="(max-width: 767px)" srcset="/assets/images/image-waffle-mobile.jpg">
+          
+              
+              <img class="food-card-img-img" src="/assets/images/image-waffle-desktop.jpg" alt="Waffle">
+            </picture>
+        
+            <button class="food-card-button">
+              <img src="/assets/images/icon-add-to-cart.svg" alt="">
+              <div>Add to cart</div>
+            </button>
+            
+            <button class="food-card-button-added">
+              <div class="minus"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" fill="none" viewBox="0 0 10 2"><path fill="#fff" d="M0 .375h10v1.25H0V.375Z"/></svg></div>
+              <p class="count">4</p>
+              <div class="plus"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 10 10"><path fill="#fff" d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z"/></svg></div>
+            </button>
+      
+          </div>
+      
+          <div class="food-card-content">
+            <p class="sub-title">Waffle</p>
+            <p class="title">Waffle with Berries</p>
+            <p class="price">6.50</p>
+          </div>
+        
+        </div> -->
+      </div>
+    </div>
+  
+    <aside class="cart">
+      <div class="cart-quantity">Your Cart (<span id="quantity"></span>)</div>
+      <div class="empty-cart">
+        <img class="empty-cart-img" src="/assets/images/illustration-empty-cart.svg" alt="">
+        <p>Your added items will appear here</p>
+      </div>
+
+      <div class="added-items">
+        <div class="item">
+          <div class="item-left-part">
+            <p>Classic Tiramisu</p>
+            <div class="item-numbers">
+              <div class="number"><span class="count"></span>x</div>
+              <div class="price-unit">@$5.50</div>
+              <div class="price-global">$5.50</div>
+            </div>
+          </div>
+          <button class="delete-item"></button>
+        </div>
+      </div>
+
+      <div class="order-total">
+        <p>Order Total</p>
+        <div class="total"> $46.50</div>
+      </div>
+
+      <div class="carbon-neutral">
+        <img src="/assets/images/icon-carbon-neutral.svg" alt="">
+        <p>This is a <span class="bold">carbon-neutral</span> delivery</p>
+      </div>
+
+      <button class="button-confirm-order">Confirm order</button>
+    </aside>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Oswald Chartrain</a>.
+  </div>
+
+  <script src="/index.js"></script>
+
+</body>
+</html>

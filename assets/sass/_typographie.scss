@@ -1,0 +1,43 @@
+@font-face {
+  font-family: RedHatText-Regular;
+  src: url(../fonts/RedHatText-Regular.ttf);
+}
+@font-face {
+  font-family: RedHatText-SemiBold;
+  src: url(../fonts/RedHatText-SemiBold.ttf);
+}
+@font-face {
+  font-family: RedHatText-Bold;
+  src: url(../fonts/RedHatText-Bold.ttf);
+}
+
+@mixin Text-preset-1{
+  font-family: RedHatText-Bold;
+  font-size : 56px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+@mixin Text-preset-2{
+  font-family: RedHatText-Bold;
+  font-size : 24px;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+@mixin Text-preset-3{
+  font-family: RedHatText-Bold;
+  font-size : 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+@mixin Text-preset-4{
+  font-family: RedHatText-Regular;
+  font-size : 14px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+@mixin Text-preset-4-bold{
+  font-family: RedHatText-SemiBold;
+  font-size : 14px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}

@@ -1,0 +1,324 @@
+body, *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    padding:88px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FCF8F6;
+}
+
+
+.global-container{
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 32px 24px;
+    gap: 32px;
+    max-width: 1216px;
+
+    @media screen and (max-width: 1212px){
+        grid-template-columns: 1fr;
+    }
+
+    h1{
+        margin-bottom: 32px;
+        @include Text-preset-1;
+        color: $Rose-900
+    }
+}
+
+
+
+// FOOD CARD
+
+.food-card-container{
+    display: grid;
+    grid-template-columns: repeat( 3, minmax(215px, 1fr) );
+    gap: 32px 24px;
+    max-width: 100%;
+
+    @media screen and (max-width: 1212px){
+        grid-template-columns: repeat( 2, minmax(215px, 1fr) );
+    }
+    @media screen and (max-width: 767px){
+        grid-template-columns: repeat( 1, minmax(215px, 1fr) );
+    }
+}
+
+
+.food-card{
+
+    .food-card-content{
+        margin-top: 38px;
+        display: flex;
+        flex-direction: column;
+        gap:4px;
+
+        .sub-title{
+            color: $Rose-500;
+            @include Text-preset-4
+        }
+
+        .title{
+            color:$Rose-900 ;
+            @include Text-preset-3
+        }
+
+        .price{
+            color: $Red;
+            @include Text-preset-3
+        }
+    }
+}
+
+.food-card-block-img{
+    position: relative;
+    
+    .food-card-img-img{
+        border-radius: 8px;
+        width: 100%;
+    }
+
+    .food-card-button{
+        transform: translate(-50%, 40%);
+        position: absolute;
+        bottom: 0;
+        left:50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px;
+        background-color: $White;
+        border: solid 1px $Rose-500;
+        border-radius: 999px;
+        width: 160px;
+    
+        font-weight: 700;
+        color: $Rose-900;
+
+        @include Text-preset-4;
+
+        &:hover{
+            color: $Red;
+            border: 1px solid $Red;
+            cursor: pointer;
+        }
+    }
+    .food-card-button-added{
+        transform: translate(-50%, 40%);
+        position: absolute;
+        bottom: 0;
+        left:50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 12px;
+        background-color: $Red;
+        border: solid 1px $Red;
+        border-radius: 999px;
+        color: $White;
+
+        width: 160px;
+
+        @include Text-preset-4-bold;
+
+        .minus{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20px;
+            width: 20px;
+            border: 1.5px solid $White;
+            border-radius: 999px;
+            padding: 3px;
+
+            &:hover{
+                cursor: pointer;
+                border: 1.5px solid $White;
+                background-color: $White;
+            }
+
+            &:hover svg{
+                filter: invert(23%) sepia(50%) saturate(7105%) hue-rotate(17deg) brightness(94%) contrast(88%);
+            }
+        }
+
+        .plus{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20px;
+            width: 20px;
+            border: 1.5px solid $White;
+            border-radius: 999px;
+            padding: 3px;
+
+            &:hover{
+                cursor: pointer;
+                border: 1.5px solid $White;
+                background-color: $White;
+            }
+
+            &:hover svg{
+                filter: invert(23%) sepia(50%) saturate(7105%) hue-rotate(17deg) brightness(94%) contrast(88%);
+            }
+        }
+
+    }
+}
+
+
+
+// CART
+.cart{
+    background-color: $White;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: $spacing-300;
+    border-radius: 12px;
+    height: fit-content;
+
+    .empty-cart-img{
+        margin : 30px;
+    }
+
+    .cart-quantity{
+        @include Text-preset-2;
+        width: 100%;
+        color: $Red;
+        margin-bottom: 6px;
+    }
+
+    p{
+        color: $Rose-500;
+        @include Text-preset-4;
+    }
+
+    .carbon-neutral{
+        display: flex;
+        background-color: #FCF8F6;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 0;
+        border-radius: 8px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+
+        p{
+            @include Text-preset-4;
+            color: $Rose-900;
+        }
+
+        .bold{
+            @include Text-preset-4-bold;
+            color: $Rose-900;
+        }
+    }
+    
+    .button-confirm-order{
+        background-color: $Red;
+        border: none;
+        border-radius: 999px;
+        padding:  16px 0;
+        width: 100%;
+        color: $White;
+        @include Text-preset-3;
+
+        &:hover{
+            cursor: pointer;
+            background-color: #952c0b;
+        }
+    }
+
+}
+
+
+.added-items{
+    width: 100%;
+}
+
+.item{
+    display:flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $Rose-100;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    .item-left-part>p{
+            @include Text-preset-4-bold;
+            color:$Rose-900
+    }
+
+    .item-numbers{
+
+        display: flex;
+        gap:8px;
+        margin-top: 8px;;
+
+        .number{
+            @include Text-preset-4-bold;
+            color:$Red;
+        }
+    
+        .price-unit{
+            @include Text-preset-4;
+            color: $Rose-500
+        }
+    
+        .price-global{
+            @include Text-preset-4-bold;
+            color: $Rose-500;
+        }
+    }
+
+    .delete-item{
+        border: 1px solid $Rose-500;
+        background-color: transparent;
+        border-radius: 999px;
+        padding:1px;
+        height: 18px;
+        width: 18px;
+
+        &::after{
+            content: url('/assets/images/icon-remove-item.svg');
+        }
+
+        &:hover{
+            cursor: pointer;
+            filter: invert(0%) sepia(4%) saturate(7460%) hue-rotate(337deg) brightness(104%) contrast(101%);        }
+
+    }
+}
+
+.order-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 6px;
+
+    p{
+        color: $Rose-900;
+        @include Text-preset-4;
+    }
+
+    .total{
+        @include Text-preset-2;
+        color: $Black;
+    }
+
+
+}
